@@ -213,6 +213,7 @@ function formatUsd(n) {
   return "$" + n.toFixed(2);
 }
 function formatK(n) {
+  if (n >= 1_000_000_000) return (n / 1_000_000_000).toFixed(2) + "B";
   if (n >= 1_000_000) return (n / 1_000_000).toFixed(2) + "M";
   if (n >= 1_000) return (n / 1_000).toFixed(1) + "K";
   return String(n);
@@ -238,7 +239,13 @@ function printReport(days, sessions, patterns, totals) {
     `Cache read: ${formatK(totals.usage.cache_read_input_tokens).padStart(7)}   Cache write: ${formatK(totals.usage.cache_creation_input_tokens).padStart(7)}`,
   );
   console.log(
-    `Estimated API-equivalent spend: ${formatUsd(totalCost)} (Opus pricing)`,
+    `API-equivalent spend:  ${formatUsd(totalCost)}  (Opus 4.x pricing)`,
+  );
+  console.log(
+    `  ↳ On Max/Pro you pay the flat subscription; this is context intensity`,
+  );
+  console.log(
+    `  ↳ On Sonnet divide by ~5. The patterns stay the same either way.`,
   );
 
   const totalCache =
@@ -275,9 +282,12 @@ function printReport(days, sessions, patterns, totals) {
     const dur = s.firstTs && s.lastTs
       ? Math.max(0, Math.round((s.lastTs - s.firstTs) / 60000))
       : 0;
-    const proj = s.project.replace(/^-home-\w+-/, "").slice(0, 36);
+    const when = s.firstTs
+      ? new Date(s.firstTs).toISOString().slice(0, 10)
+      : "unknown";
+    const proj = s.project.replace(/^-home-\w+-/, "").slice(0, 30);
     console.log(
-      `  ${formatUsd(s.cost).padStart(7)}  ${proj.padEnd(36)}  ${s.assistantTurns} turns / ${dur}min`,
+      `  ${formatUsd(s.cost).padStart(8)}  ${when}  ${proj.padEnd(30)}  ${String(s.assistantTurns).padStart(4)} turns / ${dur}min`,
     );
   }
 

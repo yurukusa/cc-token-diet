@@ -30,23 +30,30 @@ it in depth.
 ```
 📉 cc-token-diet report (last 7 days)
 ────────────────────────────────────────────────────────
-Sessions analysed: 62   Assistant turns: 11,204
-Input:     138K   Output:         3.1M
-Cache read: 1.8G   Cache write:   21M
-Estimated API-equivalent spend: $3,240.12 (Opus pricing)
-Cache hit ratio: 98.8% (higher is better, aim >85%)
+Sessions analysed: 312   Assistant turns: 36973
+Input:   457.8K   Output:         7.36M
+Cache read:   5.21B   Cache write:  87.15M
+API-equivalent spend:  $10007.22  (Opus 4.x pricing)
+  ↳ On Max/Pro you pay the flat subscription; this is context intensity
+  ↳ On Sonnet divide by ~5. The patterns stay the same either way.
+Cache hit ratio: 98.4% (higher is better, aim >85%)
 
 🔥 Waste patterns:
-  ❗ 18 runaway session(s) (>100 assistant turns) (≈ $912.40 wasted)
+  ❗ 87 runaway session(s) (>100 assistant turns) (≈ $2726.01 wasted)
      Fix:  Long single sessions bloat context exponentially.
            Use /compact or restart for each logical task.
      See:  Token Book ch3 (context management)
 
 🌡️  Hottest sessions:
-  $431.08  projects-cc-loop           1103 turns / 180min
-  $192.83  projects-cc-loop            664 turns / 143min
-  $139.42  projects-cc-loop            526 turns / 96min
+   $513.26  2026-04-19  projects-cc-loop         955 turns / 157min
+   $499.34  2026-04-16  -home-namakusa           898 turns / 3898min
+   $431.08  2026-04-20  projects-cc-loop        1103 turns / 180min
 ```
+
+This is real output from the author's own logs. A 7-day window surfaced 87
+runaway sessions worth ~$2,700 of context intensity that could have been
+trimmed by splitting into smaller sessions. Your numbers will differ — but the
+*shape* is how you know what to change.
 
 ## Usage
 
