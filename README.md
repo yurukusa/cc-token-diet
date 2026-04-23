@@ -3,8 +3,11 @@
 Find where your Claude Code tokens are leaking — with $ impact and fixes.
 
 ```
-npx cc-token-diet
+npx github:yurukusa/cc-token-diet
 ```
+
+> The npm package is not yet published. Use the GitHub-direct form above for now;
+> an `npx cc-token-diet` short form will be added when published.
 
 Reads your local Claude Code conversation logs (`~/.claude/projects/`), detects
 specific waste patterns, and tells you which sessions cost the most and what to
@@ -59,13 +62,13 @@ trimmed by splitting into smaller sessions. Your numbers will differ — but the
 
 ```bash
 # default — last 7 days
-npx cc-token-diet
+npx github:yurukusa/cc-token-diet
 
 # wider window
-npx cc-token-diet --days 30
+npx github:yurukusa/cc-token-diet --days 30
 
 # machine-readable
-npx cc-token-diet --json > report.json
+npx github:yurukusa/cc-token-diet --json > report.json
 ```
 
 ## Privacy
