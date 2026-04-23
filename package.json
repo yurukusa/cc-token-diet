@@ -1,0 +1,30 @@
+{
+  "name": "cc-token-diet",
+  "version": "0.1.0",
+  "description": "Find where your Claude Code tokens are leaking — waste patterns with $ impact and fixes.",
+  "type": "module",
+  "bin": {
+    "cc-token-diet": "cli.mjs"
+  },
+  "scripts": {
+    "start": "node cli.mjs"
+  },
+  "keywords": [
+    "claude-code",
+    "claude",
+    "tokens",
+    "cost",
+    "optimization",
+    "cache",
+    "analytics"
+  ],
+  "author": "yurukusa",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yurukusa/cc-token-diet.git"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
