@@ -94,6 +94,14 @@ incidents with hook examples):
 - **Token Book** (¥2,500) — <https://ko-fi.com/s/fd44ef09a7>
 - **Free first chapter** — <https://zenn.dev/yurukusa/books/token-savings-guide>
 
+## Want ongoing incident alerts?
+`cc-token-diet` shows you this month's waste. The patterns that cause it keep
+changing as Claude Code evolves.
+**[CC Safety Lab Founder](https://ko-fi.com/yurukusa)** (¥500/mo Ko-fi Membership) delivers a monthly
+digest: 3–5 curated incidents from GitHub with fixes, 1 new safety hook, 1
+measured token-saving technique with actual $ data, and early access to Token
+Book updates. Issue #1 ships 2026-05-01. Founder price locked for charter
+members.
 ## License
 
 MIT
