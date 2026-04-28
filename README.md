@@ -98,20 +98,33 @@ Use them together: forecast your pace, audit your waste, fix the leaks.
 
 ## Learn more
 
-The full token-saving playbook (10 chapters, 40+ documented symptoms, real
-incidents with hook examples):
+`cc-token-diet` finds the patterns. These cover the fixes in depth — real
+incidents with hook examples, all written by the same author (a non-engineer
+who spent 800+ hours running Claude Code autonomously):
 
-- **Token Book** (¥2,500) — <https://ko-fi.com/s/fd44ef09a7>
-- **Free first chapter** — <https://zenn.dev/yurukusa/books/token-savings-guide>
+- **[Token Book EN](https://yurukusa.gumroad.com/l/azrdt)** ($12, Gumroad) — 48 documented token-waste symptoms, each with diagnosis and fix. Same content as the Japanese version, in English.
+- **[Token Book JP](https://ko-fi.com/s/fd44ef09a7)** (¥2,500, Ko-fi) — Japanese edition. Free first chapter: [Zenn](https://zenn.dev/yurukusa/books/token-savings-guide)
+- **[CC-Codex Ops Kit](https://yurukusa.gumroad.com/l/cc-codex-ops-kit)** ($0+ pay-what-you-want, Gumroad) — 10 production hooks + 5 operational templates. Cheapest-possible entry point; start at $0 and decide later.
+- **[cc-safe-setup](https://github.com/yurukusa/cc-safe-setup)** (MIT, free) — 707 example hooks, 9,200+ tests. The parent repo this tool complements. Includes free [Token Checkup](https://yurukusa.github.io/cc-safe-setup/token-checkup.html) diagnostic.
+
+## Deciding whether to stay, switch, or hybridize
+
+`cc-token-diet` tells you what's leaking this month. It does not tell you whether
+the right answer is to stay on Claude Code, switch to Cursor/Cline/Codex, or run
+a hybrid DIY stack. That's a different question with its own evidence base — six
+weeks of regressions between early March and late April 2026, five distinct
+migration triggers, and switching costs that are irrecoverable once committed.
+
+- **Free preview gist** — [The Five Migration Triggers (with measurable `/usage --json` thresholds)](https://gist.github.com/yurukusa/dc262a08f47afe3e78aaaf24887edca3). Cache TTL 0.40 threshold, Opus 4.7 tokenizer 1.30× threshold, Pro plan instability, weekly reset bugs, third-party tool ban.
+- **Full book** — Claude Code Migration Playbook ($19, shipping 2026-05-08 on Gumroad). Three migration paths (Stay-and-Fortify / Switch Platforms / Hybrid DIY), six-axis comparison grid, cost forecast worksheet, decision tree, 48-hour rollback checklist, appendix of all sources. Edition 1 buyers receive Edition 2 free.
 
 ## Want ongoing incident alerts?
 `cc-token-diet` shows you this month's waste. The patterns that cause it keep
 changing as Claude Code evolves.
-**[CC Safety Lab Founder](https://ko-fi.com/yurukusa)** (¥500/mo Ko-fi Membership) delivers a monthly
+**[CC Safety Lab Founder](https://ko-fi.com/yurukusa/tiers)** (¥500/mo Ko-fi Membership) delivers a monthly
 digest: 3–5 curated incidents from GitHub with fixes, 1 new safety hook, 1
 measured token-saving technique with actual $ data, and early access to Token
-Book updates. Issue #1 ships 2026-05-01. Founder price locked for charter
-members.
+Book updates. Issue #1 ships 2026-05-01.
 ## License
 
 MIT
